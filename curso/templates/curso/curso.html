@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Cursos</h1>
+<ul>
+  {% for curso in cursos %}
+    <li> <a href="{% url 'curso:curso_details' curso.id %}">{{ curso.nome }}</a></li>
+  {% endfor %}
+</ul>
+
+{% if user.is_authenticated and canUserManipulate%}
+    <p>
+        <a href="{% url 'curso:create_curso' %}"> <button>Criar Curso</button></a>
+    </p>
+{% endif %}
+
+<form action="{% url 'welcome'%}">
+    <input type="submit" value="Cancel" />
+</form><br>
+
+{% endblock %}

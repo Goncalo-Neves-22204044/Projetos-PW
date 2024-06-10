@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+
+{% block style %}
+
+/* Adjusted selectors for common elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling for the modified-forecast-item */
+.modified-forecast-item {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.modified-forecast-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modified-forecast-item img {
+
+    max-width: 10%;
+}
+
+/* Adjusted styling for the updated-links */
+#updated-links {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin: 20px;
+}
+
+#updated-links .updated-btn-meteo {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0;
+    background-color: #e0e0e0;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#updated-links .updated-btn-meteo:hover {
+    background-color: #ccc;
+    transform: translateY(-3px);
+}
+
+#updated-links .updated-btn-meteo:active {
+    background-color: #aaa;
+    transform: translateY(0);
+}
+
+#updated-links .updated-invisible {
+    display: none;
+}
+
+{% endblock style %}
+
+
+
+
+{% block content %}
+    <div class="container">
+        <h1 id="headerLabel">Previsão Meteorológica</h1>
+        <div class="modified-city-selector">
+            <label for="city">Escolha a cidade:</label>
+            <select id="city">
+                <option value="">Selecione uma cidade</option>
+                {% for city in cities %}
+                <option value="{{ city.globalIdLocal }}">{{ city.local }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div id="updated-forecast" class="updated-forecast"></div>
+
+        <div id="updated-links">
+            <a href="{% url 'meteo:cidadesAPI' %}" class="updated-btn-meteo">API com Lista de cidades</a>
+            <a href="{% url 'meteo:previsao_lisboa' %}" class="updated-btn-meteo">Previsao de Lisboa</a>
+            <a id="updated-apiTempoCidade" href="" class="updated-invisible updated-btn-meteo"></a>
+        </div>
+        <form action="{% url 'meteo:index'%}">
+            <input type="submit" value="Voltar" />
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('city').addEventListener('change', function() {
+            const cityId = this.value;
+            const city = document.querySelector('#city option:checked').textContent;
+            document.getElementById("headerLabel").innerHTML = `Previsão Meteorológica para ${city}`;
+            console.log(headerLabel);
+
+            const updatedApiTempoCidadeBtn = document.getElementById('updated-apiTempoCidade');
+            updatedApiTempoCidadeBtn.classList.remove('updated-invisible');
+            updatedApiTempoCidadeBtn.href = `/meteo/api/tempo/${cityId}/`;
+            updatedApiTempoCidadeBtn.innerText = `Previsão para ${city} (API)`;
+
+            if (cityId) {
+                fetch(`/meteo/previsao/${cityId}/`)
+                    .then(response => response.json())
+                    .then(data => {
+                        const updatedForecastDiv = document.getElementById('updated-forecast');
+                        updatedForecastDiv.innerHTML = '';
+                        data.forecast.forEach(dailyForecast => {
+                            const forecastItem = document.createElement('div');
+                            forecastItem.className = 'modified-forecast-item';
+                            forecastItem.innerHTML = `
+                                <h3>${dailyForecast.day.forecastDate}</h3>
+                                <p>Temperatura Mínima: ${dailyForecast.day.tMin} °C</p>
+                                <p>Temperatura Máxima: ${dailyForecast.day.tMax} °C</p>
+                                <p>Probabilidade chuva: ${dailyForecast.day.precipitaProb}%</p>
+                                <div id='icon'>
+                                    <img src="${dailyForecast.weather_type_url}">
+                                </div>
+                                <p>Tempo: ${dailyForecast.weatherDescription}</p>
+                            `;
+                            updatedForecastDiv.appendChild(forecastItem);
+                        });
+                    });
+            }
+        });
+    </script>
+{% endblock %}

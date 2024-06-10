@@ -1,0 +1,242 @@
+[
+    {
+        "title": "Master of Puppets",
+        "release_year": 1986,
+        "band": "Metallica",
+        "songs": [
+            {"title": "Battery", "duration": "5:12"},
+            {"title": "Master of Puppets", "duration": "8:36"},
+            {"title": "The Thing That Should Not Be", "duration": "6:36"},
+            {"title": "Welcome Home (Sanitarium)", "duration": "6:28"},
+            {"title": "Disposable Heroes", "duration": "8:16"}
+        ]
+    },
+    {
+        "title": "The Number of the Beast",
+        "release_year": 1982,
+        "band": "Iron Maiden",
+        "songs": [
+            {"title": "Invaders", "duration": "3:20"},
+            {"title": "Children of the Damned", "duration": "4:35"},
+            {"title": "The Prisoner", "duration": "6:00"},
+            {"title": "22 Acacia Avenue", "duration": "6:34"},
+            {"title": "The Number of the Beast", "duration": "4:50"}
+        ]
+    },
+    {
+        "title": "Paranoid",
+        "release_year": 1970,
+        "band": "Black Sabbath",
+        "songs": [
+            {"title": "War Pigs", "duration": "7:55"},
+            {"title": "Paranoid", "duration": "2:50"},
+            {"title": "Planet Caravan", "duration": "4:30"},
+            {"title": "Iron Man", "duration": "5:56"},
+            {"title": "Electric Funeral", "duration": "4:49"}
+        ]
+    },
+    {
+        "title": "Reign in Blood",
+        "release_year": 1986,
+        "band": "Slayer",
+        "songs": [
+            {"title": "Angel of Death", "duration": "4:50"},
+            {"title": "Piece by Piece", "duration": "2:02"},
+            {"title": "Necrophobic", "duration": "1:40"},
+            {"title": "Altar of Sacrifice", "duration": "2:50"},
+            {"title": "Jesus Saves", "duration": "2:54"}
+        ]
+    },
+    {
+        "title": "Rust in Peace",
+        "release_year": 1990,
+        "band": "Megadeth",
+        "songs": [
+            {"title": "Holy Wars... The Punishment Due", "duration": "6:32"},
+            {"title": "Hangar 18", "duration": "5:11"},
+            {"title": "Take No Prisoners", "duration": "3:27"},
+            {"title": "Five Magics", "duration": "5:40"},
+            {"title": "Poison Was the Cure", "duration": "2:57"}
+        ]
+    },
+    {
+        "title": "Vulgar Display of Power",
+        "release_year": 1992,
+        "band": "Pantera",
+        "songs": [
+            {"title": "Mouth for War", "duration": "3:56"},
+            {"title": "A New Level", "duration": "3:57"},
+            {"title": "Walk", "duration": "5:15"},
+            {"title": "Fucking Hostile", "duration": "2:48"},
+            {"title": "This Love", "duration": "6:32"}
+        ]
+    },
+    {
+        "title": "British Steel",
+        "release_year": 1980,
+        "band": "Judas Priest",
+        "songs": [
+            {"title": "Breaking the Law", "duration": "2:36"},
+            {"title": "Rapid Fire", "duration": "4:07"},
+            {"title": "Metal Gods", "duration": "4:04"},
+            {"title": "Grinder", "duration": "3:58"},
+            {"title": "United", "duration": "3:35"}
+        ]
+    },
+    {
+        "title": "Ace of Spades",
+        "release_year": 1980,
+        "band": "Motorhead",
+        "songs": [
+            {"title": "Ace of Spades", "duration": "2:48"},
+            {"title": "Love Me Like a Reptile", "duration": "3:23"},
+            {"title": "Shoot You in the Back", "duration": "2:39"},
+            {"title": "Live to Win", "duration": "3:37"},
+            {"title": "Fast and Loose", "duration": "3:23"}
+        ]
+    },
+    {
+        "title": "Among the Living",
+        "release_year": 1987,
+        "band": "Anthrax",
+        "songs": [
+            {"title": "Among the Living", "duration": "5:16"},
+            {"title": "Caught in a Mosh", "duration": "5:00"},
+            {"title": "I Am the Law", "duration": "5:57"},
+            {"title": "Efilnikufesin (N.F.L.)", "duration": "4:54"},
+            {"title": "A Skeleton in the Closet", "duration": "5:32"}
+        ]
+    },
+    {
+        "title": "Beneath the Remains",
+        "release_year": 1989,
+        "band": "Sepultura",
+        "songs": [
+            {"title": "Beneath the Remains", "duration": "5:14"},
+            {"title": "Inner Self", "duration": "5:10"},
+            {"title": "Stronger Than Hate", "duration": "5:50"},
+            {"title": "Mass Hypnosis", "duration": "4:24"},
+            {"title": "Sarcastic Existence", "duration": "4:45"}
+        ]
+    },
+    {
+        "title": "Kill 'Em All",
+        "release_year": 1983,
+        "band": "Metallica",
+        "songs": [
+            {"title": "Hit the Lights", "duration": "4:17"},
+            {"title": "The Four Horsemen", "duration": "7:13"},
+            {"title": "Motorbreath", "duration": "3:08"},
+            {"title": "Jump in the Fire", "duration": "4:42"},
+            {"title": "(Anesthesia) - Pulling Teeth", "duration": "4:15"}
+        ]
+    },
+    {
+        "title": "Powerslave",
+        "release_year": 1984,
+        "band": "Iron Maiden",
+        "songs": [
+            {"title": "Aces High", "duration": "4:30"},
+            {"title": "2 Minutes to Midnight", "duration": "6:00"},
+            {"title": "Losfer Words (Big 'Orra)", "duration": "4:15"},
+            {"title": "Flash of the Blade", "duration": "4:05"},
+            {"title": "Powerslave", "duration": "7:11"}
+        ]
+    },
+    {
+        "title": "Heaven and Hell",
+        "release_year": 1980,
+        "band": "Black Sabbath",
+        "songs": [
+            {"title": "Neon Knights", "duration": "3:53"},
+            {"title": "Children of the Sea", "duration": "5:34"},
+            {"title": "Lady Evil", "duration": "4:26"},
+            {"title": "Heaven and Hell", "duration": "6:57"},
+            {"title": "Wishing Well", "duration": "4:07"}
+        ]
+    },
+    {
+        "title": "South of Heaven",
+        "release_year": 1988,
+        "band": "Slayer",
+        "songs": [
+            {"title": "South of Heaven", "duration": "4:59"},
+            {"title": "Silent Scream", "duration": "3:07"},
+            {"title": "Live Undead", "duration": "3:50"},
+            {"title": "Behind the Crooked Cross", "duration": "3:15"},
+            {"title": "Mandatory Suicide", "duration": "4:03"}
+        ]
+    },
+    {
+        "title": "Countdown to Extinction",
+        "release_year": 1992,
+        "band": "Megadeth",
+        "songs": [
+            {"title": "Skin o' My Teeth", "duration": "3:14"},
+            {"title": "Symphony of Destruction", "duration": "4:07"},
+            {"title": "Architecture of Aggression", "duration": "3:34"},
+            {"title": "Foreclosure of a Dream", "duration": "4:17"},
+            {"title": "Sweating Bullets", "duration": "5:27"}
+        ]
+    },
+    {
+        "title": "Far Beyond Driven",
+        "release_year": 1994,
+        "band": "Pantera",
+        "songs": [
+            {"title": "Strength Beyond Strength", "duration": "3:38"},
+            {"title": "Becoming", "duration": "3:05"},
+            {"title": "5 Minutes Alone", "duration": "5:47"},
+            {"title": "I'm Broken", "duration": "4:25"},
+            {"title": "Good Friends and a Bottle of Pills", "duration": "2:54"}
+        ]
+    },
+    {
+        "title": "Defenders of the Faith",
+        "release_year": 1984,
+        "band": "Judas Priest",
+        "songs": [
+            {"title": "Freewheel Burning", "duration": "4:23"},
+            {"title": "Jawbreaker", "duration": "3:25"},
+            {"title": "Rock Hard Ride Free", "duration": "5:34"},
+            {"title": "The Sentinel", "duration": "5:04"},
+            {"title": "Love Bites", "duration": "4:47"}
+        ]
+    },
+    {
+        "title": "Overkill",
+        "release_year": 1979,
+        "band": "Motorhead",
+        "songs": [
+            {"title": "Overkill", "duration": "5:12"},
+            {"title": "Stay Clean", "duration": "2:40"},
+            {"title": "(I Won't) Pay Your Price", "duration": "2:56"},
+            {"title": "I'll Be Your Sister", "duration": "2:51"},
+            {"title": "Capricorn", "duration": "4:12"}
+        ]
+    },
+    {
+        "title": "Spreading the Disease",
+        "release_year": 1985,
+        "band": "Anthrax",
+        "songs": [
+            {"title": "A.I.R.", "duration": "5:45"},
+            {"title": "Lone Justice", "duration": "4:36"},
+            {"title": "Madhouse", "duration": "4:19"},
+            {"title": "The Enemy", "duration": "5:25"},
+            {"title": "Armed and Dangerous", "duration": "5:43"}
+        ]
+    },
+    {
+        "title": "Arise",
+        "release_year": 1991,
+        "band": "Sepultura",
+        "songs": [
+            {"title": "Arise", "duration": "3:18"},
+            {"title": "Dead Embryonic Cells", "duration": "4:52"},
+            {"title": "Desperate Cry", "duration": "6:41"},
+            {"title": "Under Siege (Regnum Irae)", "duration": "4:53"},
+            {"title": "Altered State", "duration": "6:34"}
+        ]
+    }
+]

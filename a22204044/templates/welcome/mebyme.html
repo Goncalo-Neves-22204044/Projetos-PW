@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+
+{% block style %}
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .section {
+        margin-bottom: 40px;
+    }
+    
+    .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    
+    .flex-item {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        flex: 1 1 calc(50% - 20px);
+    }
+    
+    .skills ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .skills li {
+        background-color: #ffffff;
+        padding: 15px 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        flex: 1 1 calc(33.33% - 10px);
+        margin-bottom: 10px;
+        font-size: 18px;
+        color: #333;
+    }
+    
+    .interests p {
+        line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+        .flex-item {
+            flex: 1 1 100%;
+        }
+        
+        .skills li {
+            flex: 1 1 100%;
+        }
+    }
+{% endblock style %}
+
+{% block content %}
+    <div class="container">
+        <header>
+            <h1>Sobre Mim</h1>
+        </header>
+        <section class="section introduction">
+            <h2>Introdução</h2>
+            <p>Com 21 anos, estou atualmente na universidade a estudar Engenharia de Software. Sempre tive interesse em tecnologia, por isso escolhi esta área. Tenho jeito para resolver problemas e estou determinado a destacar-me na indústria tecnológica.</p>
+        </section>
+        <section class="section education">
+            <h2>Educação</h2>
+            <div class="flex-container">
+                <div class="flex-item">
+                    <h3>Ensino Superior:</h3>
+                    <p>Engenharia Informática</p>
+                </div>
+                <div class="flex-item">
+                    <h3>Ensino Secundário:</h3>
+                    <p>Técnico de Gestão e Programação de Sistemas Informáticos</p>
+                </div>
+            </div>
+        </section>
+        <section class="section skills">
+            <h2>Competências</h2>
+            <ul>
+                <li>Java</li>
+                <li>SQL</li>
+                <li>Django</li>
+                <li>HTML</li>
+                <li>CSS</li>
+            </ul>
+        </section>
+        <section class="section interests">
+            <h2>Interesses</h2>
+            <p>Além dos estudos, este aluno tem uma série de interesses. Desde desporto, especialmente futebol e basquetebol, até à música, onde toca guitarra nas horas vagas. Gosta também de filmes e séries de ficção científica, encontrando inspiração para os seus projetos de programação. Nos tempos livres, costuma sair com amigos, mas também valoriza momentos de tranquilidade para ler e aprender sobre novas tecnologias.</p>
+        </section>
+    </div>
+{% endblock %}

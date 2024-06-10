@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>{{ disciplina.nome }}</h2>
+
+    <div>
+        <p>Ano: {{ disciplina.ano }}</p>
+        <p>Semestre: {{ disciplina.semestre }}</p>
+        <p>Nº de ECTS: {{ disciplina.ects }}</p>
+        <p>Código da disciplina: {{ disciplina.curricularUnitReadableCode }}</p>
+        <p>Área Científica: {{ disciplina.areaCientifica }}</p>
+
+        <p>Linguagens de Programação:
+            {% for linguagem in linguagens %}
+                <p><a href="{% url 'curso:linguagem' linguagem.id %}">{{ linguagem.nome }}</a></p>
+            {% endfor %}
+        </p>
+
+
+        <h3>Projetos: </h3>
+        {% for projeto in projetos %}
+            <p><a href="{% url 'curso:projeto' projeto.id %}">{{ projeto.nome }}</a></p>
+        {% endfor %}
+
+    </div>
+
+    {% if user.is_authenticated and canUserManipulate%}
+        <p>
+            <a href="{% url 'curso:create_projeto' %}"> <button>Criar Projeto</button></a>
+            <a href="{% url 'curso:edit_disciplina' disciplina.id%}"> <button>Editar Disciplina</button></a>
+            <a href="{% url 'curso:delete_disciplina' disciplina.id%}"> <button>Apagar Disciplina</button></a>
+        </p>
+    {% endif %}
+
+    <form action="{% url 'curso:curso_details' disciplina.curso.id %}">
+        <input type="submit" value="Cancel" />
+    </form><br>
+
+{% endblock %}

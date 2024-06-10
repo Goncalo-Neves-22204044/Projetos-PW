@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block style %}
+    div.hero {
+        background-image: url('https://wallpaperaccess.com/full/247131.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 75vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+    }
+
+    .content {
+        color: white;
+        font-size: 2rem;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #ddd; /* Light Gray */
+        color: #333; /* Dark Gray */
+        text-align: center;
+        text-decoration: none;
+        font-size: 1.5rem;
+        border-radius: 8px;
+        transition-duration: 0.5s;
+        cursor: pointer;
+    }
+
+    .button:hover {
+        background-color: #bbb; /* Slightly Darker Gray */
+    }
+
+    @media (max-width: 768px) {
+        .hero {
+            height: 60vh; /* Reduce hero height on smaller screens */
+        }
+
+        .hero-text {
+            padding: 15px;
+            font-size: 1rem; /* Adjust font size for smaller screens */
+        }
+
+        .content {
+            padding: 15px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .hero {
+            height: 50vh; /* Further reduce hero height on very small screens */
+        }
+
+        .hero-text {
+            padding: 10px;
+            font-size: 0.875rem; /* Further adjust font size for very small screens */
+        }
+
+        .content {
+            padding: 10px;
+        }
+    }
+{% endblock %}
+
+{% block content %}
+    <div class="hero">
+        <div class="content">
+            <p>Welcome to my portfolio!</p>
+            <a href="{% url 'mebyme' %}" class="button">Discover More About Me</a>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Apagar Linguagem de Programação</h1>
+  <p>Tens a certeza que pretendes apagar a linguagem de programação "{{ linguagem.nome }}"?</p>
+  <form method="post">
+    {% csrf_token %}
+    <button type="submit">Sim, apagar</button>
+    <a href="{% url 'curso:cursos'%}">Cancel</a>
+  </form>
+{% endblock %}

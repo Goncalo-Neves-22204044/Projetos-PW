@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Bands</h1>
+<ul>
+  {% for band in bands %}
+    <li> <a href="{% url 'bandas:band_detail' band.id %}">{{ band.name }}</a></li>  {% endfor %}
+</ul>
+
+{% if user.is_authenticated and canUserManipulate%}
+    <a href="{% url 'bandas:create_band' %}"> <button>Criar Banda</button></a>
+{% endif %}<br>
+
+<a href="{% url 'welcome' %}">
+  <button>Cancel</button>
+</a>
+
+{% endblock %}

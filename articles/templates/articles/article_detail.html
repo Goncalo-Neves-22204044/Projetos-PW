@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<h3>{{ article.title }}</h3>
+<p>{{ article.content }}</p>
+<ul><li><p class="author">Autor: {{ article.author }}
+{% if user.is_authenticated and canUserManipulate%}
+    <a href="{% url 'articles:edit_author' article.author.id%}"> <button>Editar Autor</button></a>
+    <a href="{% url 'articles:delete_author' article.author.id%}"> <button>Apagar Autor</button></a>
+{% endif %}
+</p>
+
+<p class="release_date">Data de Criação: {{ article.release_date }}</p></li></ul>
+
+<h4>Comentários:</h4>
+<ul>
+  {% for comment in comments %}
+    <li><p>{{ comment.comment }}</p>
+    <p class="author">Autor: {{ comment.author }}</p>
+    <p class="release_date">Data de Criação: {{ comment.release_date }}</p>
+    <p></p>
+    </li>
+
+  {% empty %}
+    <li>Nenhum comentário disponível.</li>
+  {% endfor %}
+</ul>
+
+{% if user.is_authenticated and canUserManipulate%}
+    <a href="{% url 'articles:edit_article' article.id%}"> <button>Editar Artigo</button></a>
+    <a href="{% url 'articles:delete_article' article.id%}"> <button>Apagar Artigo</button></a>
+{% endif %}
+
+<a href="{% url 'articles:article_list'%}">
+     <button>Cancel</button>
+</a>
+
+{% endblock %}
+
+

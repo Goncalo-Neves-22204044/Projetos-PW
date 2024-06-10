@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{{ song.title }}</h1>
+
+    <div>
+        <p>Album: {{ song.album }}</p>
+        <p>Duração: {{ song.duration }}</p>
+        <p>Spotify link: {{ song.spotify_link }}</p>
+        {% if song.letra %}
+            <p>Letra: {{ song.letra }}</p>
+        {% endif %}
+
+
+
+    </div>
+
+    {% if user.is_authenticated and canUserManipulate%}
+        <a href="{% url 'bandas:edit_song' song.id %}"> <button>Editar música</button></a>
+        <a href="{% url 'bandas:delete_song' song.id %}"> <button>Apagar música</button></a>
+    {% endif %}
+
+    <a href="{% url 'bandas:album_detail' song.album.id%}">
+      <button>Cancel</button>
+    </a>
+
+{% endblock %}
+
+

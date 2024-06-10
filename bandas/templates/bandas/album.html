@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{{ album.name }}</h1>
+    <h2>Teste</h2>
+    <img src="{{ album.cover.url }}" alt="{{ album.name }}">
+
+{% endblock %}
+
+<button onclick="history.back()">Go Back</button>

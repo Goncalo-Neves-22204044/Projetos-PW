@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h3>Projeto de {{projeto.disciplina}}</h3>
+
+<div>
+
+    <p>Descrição: {{ projeto.descricao }}</p>
+    <p>Conceitos Aplicados: {{ projeto.conceitosAplicados }}</p>
+
+    {% if projeto.imagem %}
+        <p>Imagem: {{ projeto.imagem }}</p>
+    {% endif %}
+
+    {% if projeto.linkYoutube %}
+        <p>Youtube: {{ projeto.linkYoutube }}</p>
+    {% endif %}
+
+    {% if projeto.linkGithub %}
+        <p>GitHub: {{ projeto.linkGithub }}</p>
+    {% endif %}
+
+    {% if projeto.linguagensProgramacao.all %}
+        {% with linguagens=projeto.linguagensProgramacao.all %}
+            {% if linguagens %}
+                <p>Linguagens de programação: {{ linguagens|join:", " }}</p>
+            {% endif %}
+        {% endwith %}
+    {% endif %}
+
+
+
+</div>
+
+{% if user.is_authenticated and canUserManipulate%}
+    <p>
+        <a href="{% url 'curso:edit_projeto' projeto.id%}"> <button>Editar Projeto</button></a>
+        <a href="{% url 'curso:delete_projeto' projeto.id%}"> <button>Apagar Projeto</button></a>
+    </p>
+{% endif %}
+
+<form action="{% url 'curso:disciplina' projeto.disciplina.id %}">
+    <input type="submit" value="Cancel" />
+</form><br>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

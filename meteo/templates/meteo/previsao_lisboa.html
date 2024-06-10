@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block style %}
+
+/* Adjusted selectors for common elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling for the modified-forecast-item */
+.content {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.content img {
+
+    max-width: 100%;
+}
+
+{% endblock style %}
+
+{% block content %}
+    <div class="container">
+        <div class="content">
+            {% if meteorologia %}
+                <h1>Meteorologia Lisboa</h1><br>
+                <p>Data: {{ meteorologia.forecastDate }}</p>
+
+                <div class="info">
+                    <p>Temperatura Mínima: {{ meteorologia.tMin }} °C</p>
+                    <p>Temperatura Máxima: {{ meteorologia.tMax }} °C</p>
+                </div>
+
+                <div class="info">
+                    <img src="{{weatherTypeIcon}}" style="width:15ch">
+                </div>
+
+                <p>Probabilidade de Precipitação: {{ meteorologia.precipitaProb }} %</p>
+                <p>Descrição: {{ finalWeatherType }}</p>
+            {% else %}
+                <p>Não foi possível obter a previsão meteorológica para hoje.</p>
+            {% endif %}
+            <br>
+
+            <form action="{% url 'meteo:index'%}">
+                <input type="submit" value="Voltar" />
+            </form>
+        </div>
+    </div>
+{% endblock %}

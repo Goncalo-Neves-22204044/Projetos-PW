@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h3>Editar Linguagem de Programação</h3>
+
+    <form action="{% url 'curso:edit_linguagem' linguagem.id %}" method="post" enctype='multipart/form-data'>
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit">
+    </form>
+
+    <form action="{% url 'curso:linguagem' linguagem.id %}">
+        <input type="submit" value="Cancel" />
+    </form><br>
+
+{% endblock %}

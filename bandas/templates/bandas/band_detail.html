@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>{{ band }}</h1>
+
+<div class="band-details">
+  <p>Gênero: {{ band.genre }}</p>
+  <p>Formado em: {{ band.formed_in }}</p>
+  <p>Nacionalidade: {{ band.nationality }}</p>
+  <p>Composta por {{ band.numArtists }} artistas!</p>
+  <pre>Biografia: {{ band.biografia }}</pre>
+
+
+    {% if band.photo and band.photo.name %}
+        <img src="{{ band.photo.url }}" style="max-height: 300px; max-width: 300px;">
+    {% endif %}
+
+  <p>{{ band.info }}</p>
+</div>
+
+<h2>Discografia</h2>
+
+<ul>
+  {% for album in albums %}
+    <li>
+      <a href="{% url 'bandas:album_detail' album.pk %}">{{ album.title }}</a>
+      {% if album.photo %}
+        <img src="{{ album.photo.url }}" alt="Capa do álbum {{ album.title }}" width="100">
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
+
+{% if user.is_authenticated and canUserManipulate%}
+    <a href="{% url 'bandas:edit_band' band.id %}"> <button>Editar Banda</button></a>
+    <a href="{% url 'bandas:delete_band' band.id %}"> <button>Apagar Banda</button></a>
+    <a href="{% url 'bandas:create_album'%}"> <button>Criar Album</button></a>
+{% endif %}
+
+
+<a href="{% url 'bandas:band_list'%}">
+  <button>Cancel</button>
+</a>
+
+{% endblock %}

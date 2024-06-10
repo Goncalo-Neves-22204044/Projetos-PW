@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Apagar Projeto</h1>
+  <p>Tens a certeza que pretendes apagar o projeto "{{ projeto.nome }}"?</p>
+  <form method="post">
+    {% csrf_token %}
+    <button type="submit">Sim, apagar</button>
+    <a href="{% url 'curso:disciplina' projeto.disciplina.id %}">Cancel</a>
+  </form>
+{% endblock %}

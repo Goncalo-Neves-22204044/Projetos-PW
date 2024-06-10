@@ -1,0 +1,13 @@
+{% extends 'base.html'%}
+
+{%block content%}
+    <header>
+        <h1>Programação Web</h1></br></br>
+        <a href="{% url 'meteo:previsao_lisboa' %}">Meteorologia Lisboa Hoje</a></br></br>
+        <a href="{% url 'meteo:previsao' %}">Meteorologia Próximos 5 Dias</a>
+    </header>
+
+    <form action="{% url 'welcome'%}">
+        <input type="submit" value="Voltar" />
+    </form>
+{%endblock%}

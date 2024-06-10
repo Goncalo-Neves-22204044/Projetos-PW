@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Metallica",
+        "genre": "Metal",
+        "formed_in": 1981,
+        "nationality": "United States"
+    },
+    {
+        "name": "Iron Maiden",
+        "genre": "Metal",
+        "formed_in": 1975,
+        "nationality": "United Kingdom"
+    },
+    {
+        "name": "Black Sabbath",
+        "genre": "Metal",
+        "formed_in": 1968,
+        "nationality": "United Kingdom"
+    },
+    {
+        "name": "Slayer",
+        "genre": "Metal",
+        "formed_in": 1981,
+        "nationality": "United States"
+    },
+    {
+        "name": "Megadeth",
+        "genre": "Metal",
+        "formed_in": 1983,
+        "nationality": "United States"
+    },
+    {
+        "name": "Pantera",
+        "genre": "Metal",
+        "formed_in": 1981,
+        "nationality": "United States"
+    },
+    {
+        "name": "Judas Priest",
+        "genre": "Metal",
+        "formed_in": 1969,
+        "nationality": "United Kingdom"
+    },
+    {
+        "name": "Motorhead",
+        "genre": "Metal",
+        "formed_in": 1975,
+        "nationality": "United Kingdom"
+    },
+    {
+        "name": "Anthrax",
+        "genre": "Metal",
+        "formed_in": 1981,
+        "nationality": "United States"
+    },
+    {
+        "name": "Sepultura",
+        "genre": "Metal",
+        "formed_in": 1984,
+        "nationality": "Brazil"
+    }
+]

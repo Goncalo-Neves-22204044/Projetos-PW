@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Apagar Disciplina</h1>
+  <p>Tens a certeza que pretendes apagar a disciplina "{{ disciplina.nome }}"?</p>
+  <form method="post">
+    {% csrf_token %}
+    <button type="submit">Sim, apagar</button>
+    <a href="{% url 'curso:curso_details' disciplina.curso.id %}">Cancel</a>
+  </form>
+{% endblock %}

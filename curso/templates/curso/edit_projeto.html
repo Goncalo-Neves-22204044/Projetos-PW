@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h3>Editar Projeto</h3>
+
+    <form action="{% url 'curso:edit_projeto' projeto.id %}" method="post" enctype='multipart/form-data'>
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit">
+    </form>
+
+    <button onclick="history.back()">Cancel</button>
+
+{% endblock %}

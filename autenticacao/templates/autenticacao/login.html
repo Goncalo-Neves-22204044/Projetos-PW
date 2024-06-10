@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div>
+        <h2>Login</h2>
+        {% if mensagem %}
+            <div>{{ mensagem }}</div>
+        {% endif %}
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit" name="submeter">Login</button>
+        </form>
+
+        <ul>
+            <li>
+                <a href="{% url 'register' %}">
+                    <button>Registar</button>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'reset_password' %}">
+                    <button>Recuperar Palavra-chave</button>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <button id="botao" onclick="history.back()">Go Back</button>
+{% endblock %}

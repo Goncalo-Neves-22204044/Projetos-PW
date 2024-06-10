@@ -1,0 +1,187 @@
+.card {
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin: 8px;
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.large-text {
+    font-size: 2em;
+}
+
+.bordered {
+    border: 2px dashed blue;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Selectores de id */
+#main-header {
+    font-size: 24px;
+    color: #333;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#footer {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#sidebar {
+    width: 200px;
+    float: left;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+}
+
+#banner {
+    background-color: lightblue;
+    padding: 20px;
+    text-align: center;
+}
+
+#main-content {
+    margin-left: 220px;
+    padding: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#advertisement {
+    background-color: yellow;
+    padding: 10px;
+    border: 2px solid red;
+}
+
+
+a[target="_blank"] {
+    color: red;
+}
+
+input[type="text"] {
+    border: 2px solid #4CAF50;
+    padding: 5px;
+}
+
+img[alt] {
+    border: 3px dashed #ccc;
+    padding: 5px;
+}
+
+input[placeholder] {
+    color: grey;
+}
+
+button[type="submit"] {
+    background-color: green;
+    color: white;
+}
+
+a[href^="https"] {
+    font-weight: bold;
+}
+
+a:hover {
+    color: blue;
+}
+
+button:disabled {
+    background-color: grey;
+    color: white;
+}
+
+input:focus {
+    border-color: blue;
+}
+
+input:checked {
+    background-color: lightblue;
+}
+
+li:first-child {
+    font-weight: bold;
+}
+
+p:empty {
+    visibility: hidden;
+}
+
+p::first-line {
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+div::before {
+    content: "Prefixo: ";
+    color: grey;
+}
+
+div::after {
+    content: " Sufixo";
+    color: grey;
+}
+
+h1::after {
+    content: " - Fim";
+    font-size: 0.5em;
+    color: red;
+}
+
+a::before {
+    content: "Link: ";
+    color: blue;
+}
+
+span::first-letter {
+    font-size: 2em;
+    color: red;
+}
+
+
+article p {
+    line-height: 1.6;
+}
+
+nav > ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav > ul > li {
+    display: inline;
+    margin-right: 10px;
+}
+
+h1 + p {
+    margin-top: -10px;
+}
+
+h2 ~ p {
+    color: darkgrey;
+}
+
+header, footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f0f0f0; /* Light grey background */
+}

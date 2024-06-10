@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>{{ linguagem.nome }}</h2>
+
+    <div>
+        <p>{{ linguagem.nome }} é utilizada em:</p>
+
+        {% if linguagem.disciplina %}
+            {% for disciplina in disciplinas %}
+                <p><a href="{% url 'curso:disciplina' disciplina.id %}">{{ disciplina.nome }}</a></p>
+            {% endfor %}
+        {% else %}
+            <p>No project available</p>
+        {% endif %}
+
+    </div>
+
+    {% if user.is_authenticated and canUserManipulate%}
+        <p>
+            <a href="{% url 'curso:edit_linguagem' linguagem.id%}"> <button>Editar Linguagem de Programação</button></a>
+            <a href="{% url 'curso:delete_linguagem' linguagem.id%}"> <button>Apagar Linguagem de Programação</button></a>
+        </p>
+    {% endif %}
+
+    <form action="{% url 'curso:cursos' %}">
+        <input type="submit" value="Cancel" />
+    </form><br>
+
+{% endblock %}

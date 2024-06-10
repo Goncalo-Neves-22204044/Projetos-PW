@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores CSS e Combinadores</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,0,0" />
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 2px solid #5e5e5e;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+        }
+
+        th, td {
+            border: 1px solid #5e5e5e;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #5e5e5e;
+            color: white;
+        }
+
+        th, td, span{
+            text-align: center;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+    <h3>Seletores CSS</h3>
+    <p>O CSS (Cascading Style Sheets) é uma linguagem de estilo usada para estilizar elementos HTML. Os seletores CSS são utilizados para direcionar elementos específicos em uma página web.</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Seletores</th>
+                <th>Utilizado</th>
+                <th>Comentário</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Elemento</td>
+                <td><span class="material-symbols-outlined">check_circle</span></td>
+                <td>Seleciona elementos HTML com base em seus tipos (por exemplo, <code>p</code> para parágrafos).</td>
+            </tr>
+            <tr>
+                <td>ID</td>
+                <td><span class="material-symbols-outlined">check_circle</span></td>
+                <td>Seleciona um elemento com um ID específico definido em HTML (<code>#</code>).</td>
+            </tr>
+            <tr>
+                <td>Classe</td>
+                <td><span class="material-symbols-outlined">check_circle</span></td>
+                <td>Seleciona elementos com uma classe específica definida em HTML (<code>.</code>). <a href="exemplo.html">Exemplo aqui</a>.</td>
+            </tr>
+            <!-- Adicione mais linhas conforme necessário -->
+        </tbody>
+    </table>
+
+    <h3>Combinadores de seletores</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Combinadores</th>
+                <th>Utilizado</th>
+                <th>Comentário</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Descendente</td>
+                <td><span class="material-symbols-outlined">check_circle</span></td>
+                <td>Seleciona um elemento que é descendente de outro elemento.</td>
+            </tr>
+            <tr>
+                <td>Filho direto</td>
+                <td><span class="material-symbols-outlined">check_circle</span></td>
+                <td>Seleciona um elemento que é um filho direto de outro elemento.</td>
+            </tr>
+            <tr>
+                <td>Adjacente</td>
+                <td><span class="material-symbols-outlined">check_circle</span></td>
+                <td>Seleciona um elemento adjacente imediatamente após outro elemento.</td>
+            </tr>
+            <!-- Adicione mais linhas conforme necessário -->
+        </tbody>
+    </table>
+</body>
+</html>

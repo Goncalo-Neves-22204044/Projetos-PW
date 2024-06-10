@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Lista de Artigos{% endblock %}
+
+{% block content %}
+
+<h2>Lista de Artigos</h2>
+<ul>
+    {% for article in articles %}
+    <li>
+        <a href="{% url 'articles:article_detail' article.id %}">{{article.title}}</a>
+    </li>
+    {% endfor %}
+</ul>
+
+{% if user.is_authenticated and canUserManipulate%}
+    <a href="{% url 'articles:create_article' %}"> <button>Criar Artigo</button></a><br>
+    <a href="{% url 'articles:create_author' %}"> <button>Criar Autor</button></a>
+{% endif %}<br>
+
+<a href="{% url 'welcome' %}">
+  <button>Cancel</button>
+</a>
+
+{% endblock %}
